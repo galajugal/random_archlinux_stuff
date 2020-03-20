@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = File
+Target = usr/share/applications/qv4l2.desktop
+
+[Action]
+When = PostTransaction
+Exec = /bin/sh -c "echo 'NoDisplay=true' >> /usr/share/applications/qv4l2.desktop; echo 'NoDisplay=true' >> /usr/share/applications/qvidcap.desktop"
+

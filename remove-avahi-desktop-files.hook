@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = File
+Target = usr/share/applications/avahi-discover.desktop
+
+[Action]
+When = PostTransaction
+Exec = /bin/sh -c "echo 'NoDisplay=true' >> /usr/share/applications/avahi-discover.desktop; echo 'NoDisplay=true' >> /usr/share/applications/bssh.desktop; echo 'NoDisplay=true' >> /usr/share/applications/bvnc.desktop"
+

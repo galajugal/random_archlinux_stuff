@@ -1,0 +1,14 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = File
+Target = usr/share/applications/assistant.desktop
+Target = usr/share/applications/qdbusviewer.desktop
+Target = usr/share/applications/designer.desktop
+Target = usr/share/applications/linguist.desktop
+
+
+[Action]
+When = PostTransaction
+Exec = /bin/sh -c "echo 'NoDisplay=true' >> /usr/share/applications/assistant.desktop; echo 'NoDisplay=true' >> /usr/share/applications/qdbusviewer.desktop; echo 'NoDisplay=true' >> /usr/share/applications/designer.desktop; echo 'NoDisplay=true' >> /usr/share/applications/linguist.desktop"
+

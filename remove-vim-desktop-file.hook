@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = File
+Target = usr/share/applications/vim.desktop
+
+[Action]
+When = PostTransaction
+Exec = /bin/sh -c "echo 'NoDisplay=true' >> /usr/share/applications/vim.desktop"
+

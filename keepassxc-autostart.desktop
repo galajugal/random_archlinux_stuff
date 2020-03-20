@@ -1,0 +1,7 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+
+Type=Application
+Name=keepassxc-autostart
+Exec=/home/bl4ckh0l3/.config/autostart/keepassxc-autostart
+Terminal=false
